@@ -1,0 +1,224 @@
+body {
+    margin: 0;
+    background-color:green;
+}
+
+input {
+    visibility: hidden;
+}
+
+label {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: block;
+    background-color: red;
+    border: 1px solid white;
+    cursor: pointer;
+    left: -100px;
+
+}
+
+.result_count {
+    position: absolute;
+    bottom: 0px;
+    margin: 0;
+    text-align: center;
+    background-color: white;
+    color:black;
+    padding: 20px 0;
+    font-size: 25px;
+    font-family: sans-serif;
+    width: 100%;
+}
+.result_count::before {
+    content: "Count: "
+}
+
+
+input:checked + label {
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+
+input:checked {
+    counter-increment: count;
+}
+.result_count::after {
+    content: counter(count);
+}
+
+
+.item:nth-of-type(1) {
+    animation-name: item1Animation;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
+}
+
+@keyframes item1Animation {
+    0% {
+        left: 150%;
+        top: 10%;
+    }
+    25% {
+        left: 80%;
+        top: 50%;
+    }
+
+    50% {
+        left: 50%;
+        top: 30%;
+    }
+    75% {
+        left: 30%;
+        top: 40%;
+    }
+
+    100% {
+        left: -50%;
+        top: 10%;
+    }
+}
+.item:nth-of-type(2) {
+    animation-name: item2Animation;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
+}
+
+@keyframes item2Animation {
+    0% {
+        left: 140%;
+        top: 20%;
+    }
+    25% {
+        left: 70%;
+        top: 60%;
+    }
+
+    50% {
+        left: 60%;
+        top: 40%;
+    }
+    75% {
+        left: 20%;
+        top: 50%;
+    }
+
+    100% {
+        left: -40%;
+        top: 20%;
+    }
+}
+
+.item:nth-of-type(3) {
+    animation-name: item3Animation;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
+}
+
+@keyframes item3Animation {
+    0% {
+        left: 0%;
+        top: 0%;
+    }
+    25% {
+        left: 25%;
+        top: 25%;
+    }
+
+    50% {
+        left: 50%;
+        top: 75%;
+    }
+    75% {
+        left: 75%;
+         top: 25%;
+    }
+
+    100% {
+        left: 95%;
+        top: 0%;
+    }
+}
+
+.item:nth-of-type(4) {
+    animation-name: item4Animation;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
+}
+
+@keyframes item4Animation {
+    0% {
+        left: 100%;
+        top: 15%;
+    }
+
+    25% {
+        left: 90%;
+        top: 20%;
+    }
+
+    50% {
+        left: 80%;
+        top: 40%;
+
+    }
+
+    75% {
+        left: 60%;
+        top: 50%;
+    }
+
+    100% {
+        left:0;
+        top: 75%;
+    }
+}
+
+.item:nth-of-type(5) {
+    animation-name: item5Animation;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
+}
+
+@keyframes item5Animation {
+    0% {
+        left: 120%;
+        top: 30%;
+    }
+
+    25% {
+        left: 80%;
+        top: 40%;
+    }
+
+    50% {
+        left: 70%;
+        top: 60%;
+
+    }
+
+    75% {
+        left: 30%;
+        top: 50%;
+    }
+
+    100% {
+        left: 0%;
+        top: 40%;
+    }
+
+}
+
+
+
